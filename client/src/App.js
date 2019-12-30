@@ -37,6 +37,7 @@ class App extends React.Component {
     return (
       <div>
         azure-mern-demo
+        First Continuous Integration Demo
         <ul>
           {
             Object.keys(this.state.bestShows).map((cur, idx) => (
