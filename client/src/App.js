@@ -41,7 +41,7 @@ class App extends React.Component {
       bestShows: []
     };
   }
-
+/*
   componentDidMount() { //dev
     axios.get('http://localhost:5000/api/data')
       .then(res => {
@@ -50,8 +50,8 @@ class App extends React.Component {
       })
       .catch(alert);
   }
-
-  /*
+*/
+  
       componentDidMount() { //prod
           console.log("NEW componentDidMount success")
           axios.get('/api/data')
@@ -61,7 +61,7 @@ class App extends React.Component {
               })
               .catch(alert);
       }
-  */
+  
 
   render() {
     return (
