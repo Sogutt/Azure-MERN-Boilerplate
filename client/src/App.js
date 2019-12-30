@@ -66,6 +66,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        azure-mern-demo
         <ul>
           {
             Object.keys(this.state.bestShows).map((cur, idx) => (
