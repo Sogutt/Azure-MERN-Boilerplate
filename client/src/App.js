@@ -26,7 +26,7 @@ class App extends React.Component {
     axios.get('/api/data')
       .then(res => {
         console.log("data recieved: ", res.data);
-        this.setState({ news_data: res.data[0] });
+        this.setState({ bestShows: res.data[0] });
       })
       .catch(alert);
   }
