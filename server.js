@@ -21,7 +21,7 @@ app.use(express.static('./client/build'));
 
 app.use('/api/data', require('./routes/new-index.js'))
 
-app.get("*", (req, res) => {
+app.get("*", (req, res) => { //our GET route needs to point to the index.html in our build
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 
