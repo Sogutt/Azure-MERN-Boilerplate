@@ -2,7 +2,6 @@ import React from "react";
 import axios from 'axios';
 import "./index.css";
 
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -10,18 +9,8 @@ class App extends React.Component {
       bestShows: []
     };
   }
-  /*
-    componentDidMount() { //dev
-      axios.get('http://localhost:5000/api/data')
-        .then(res => {
-          console.log("data recieved: ", res.data[0]);
-          this.setState({ bestShows: res.data[0] });
-        })
-        .catch(alert);
-    }
-  */
 
-  componentDidMount() { //prod
+  componentDidMount() {
     console.log("componentDidMount success")
     axios.get('/api/data')
       .then(res => {
@@ -37,22 +26,16 @@ class App extends React.Component {
     return (
       <div>
         azure-mern-demo
-        First Continuous Integration Demo
         <ul>
           {
             Object.keys(this.state.bestShows).map((cur, idx) => (
               <li>{cur} - {this.state.bestShows[cur]} </li>
             ))
           }
-
         </ul>
       </div>
     );
   }
 }
-
-//const rootElement = document.getElementById("root");
-//ReactDOM.render(<WorldMap />, rootElement);
-
 
 export default App;
